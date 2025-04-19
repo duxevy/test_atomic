@@ -11,7 +11,7 @@ from users.permissions import IsOwner
 # Create your views here.
 class HabbitsViewSet(viewsets.ModelViewSet):
     """UserviewSet allows only authenticated users and admins to see and make changes in objects.
-     Also you can filter objects by username and email"""
+     Also you can filter objects by username and email """
 
     queryset = Habbits.objects.all()
     serializer_class = HabbitsSerializer
@@ -59,7 +59,7 @@ class HabbitsViewSet(viewsets.ModelViewSet):
 
 
 class PublicHabbitsListAPIView(generics.ListAPIView):
-    """Authenticated users can view all public hubbits"""
+    """Authenticated users can view all public hubbits (is for ci/cd)"""
 
     queryset = Habbits.objects.all()
     serializer_class = HabbitsSerializer
