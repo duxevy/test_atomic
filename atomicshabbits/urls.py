@@ -12,7 +12,7 @@ app_name = "atomicshabbits"
 urlpatterns = [
     path("", include(router.urls)),  # Include the generated API endpoints
     path(
-        "public-habbits/",
+        "public_habits/",
         PublicHabbitsListAPIView.as_view(),
         name="public_habbits",
     ),
